@@ -4,7 +4,6 @@
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
-        <meta name="google-adsense-account" content="ca-pub-2217728188815563">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Postfix and Prefix Notation Evaluator</title>
         <meta name="keywords" content="Postfix, Prefix, Infix, Notation, Convertor, Evaluator">
@@ -14,8 +13,6 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
             integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2217728188815563"
-        crossorigin="anonymous"></script>
     </head>
 
     <body>
@@ -35,14 +32,10 @@
                         <a class="dropdown-item" href="calculator.html">Calculator</a>
                         <a class="dropdown-item" href="prefixAndPostfixConvertor.html">Infix-&gt
                             postfix/Prefix</a>
-                        <a class="dropdown-item" href="prefixAndPostfixEvaluator.html">Postfix/Prefix-&gt
-                            Evaluate</a>
                         <a class="dropdown-item" href="Clock.html">Beautiful Clock</a>
                         <a class="dropdown-item" href="RandomFPS.html">FPS Simulator</a>
                     </div>
                     <a class="nav-item nav-link" href="#" onclick='alert("Thanks for using this tool.")'>About</a>
-                    <a class="nav-item nav-link" href="https://github.com/raj457036/Simple-Tools"
-                        target="_blank">Github</a>
 
                 </div>
             </div>
@@ -161,6 +154,59 @@
                 </div>
 
             </div>
+            <div class="evaluator-explanation">
+                <h2>Understanding the Postfix & Prefix Evaluator</h2>
+                
+                <p>Our Postfix & Prefix Evaluator is a powerful tool designed to calculate the result of mathematical expressions written in postfix (Reverse Polish Notation) or prefix (Polish Notation) formats. This evaluator is particularly useful for students, programmers, and anyone working with these alternative mathematical notations.</p>
+                
+                <h3>What are Postfix and Prefix Notations?</h3>
+                <ul>
+                  <li><strong>Postfix Notation (Reverse Polish Notation):</strong> In this notation, operators follow their operands. Example: 4 5 + 6 2 - *</li>
+                  <li><strong>Prefix Notation (Polish Notation):</strong> Here, operators precede their operands. Example: + - 2 7 * 8 / 4 12</li>
+                </ul>
+              
+                <h3>How to Use the Evaluator</h3>
+                <ol>
+                  <li>Enter your postfix or prefix expression in the input box.</li>
+                  <li>Ensure that numbers and operators are separated by spaces.</li>
+                  <li>Choose the appropriate evaluation mode (Postfix or Prefix) using the respective buttons.</li>
+                  <li>Click the "Evaluate" button to see the result.</li>
+                  <li>Review the evaluation process in the table below the result.</li>
+                </ol>
+              
+                <h3>Features of Our Evaluator</h3>
+                <ul>
+                  <li><strong>Dual Evaluation:</strong> Supports both postfix and prefix notations.</li>
+                  <li><strong>Step-by-Step Breakdown:</strong> Displays the evaluation process in detail, helping users understand the algorithm.</li>
+                  <li><strong>Support for Complex Expressions:</strong> Handles multiple operators and operands.</li>
+                  <li><strong>Easy Conversion:</strong> Includes a link to convert between infix, postfix, and prefix notations.</li>
+                </ul>
+              
+                <h3>Why Use Postfix and Prefix Notations?</h3>
+                <p>While less intuitive for humans, postfix and prefix notations have several advantages:</p>
+                <ul>
+                  <li>They eliminate the need for parentheses and operator precedence rules.</li>
+                  <li>They are easier for computers to parse and evaluate.</li>
+                  <li>They are used in many programming languages and in some calculators.</li>
+                </ul>
+              
+                <h3>Applications</h3>
+                <p>This evaluator is valuable for:</p>
+                <ul>
+                  <li>Students learning about expression evaluation and stack-based algorithms.</li>
+                  <li>Programmers implementing calculators or expression parsers.</li>
+                  <li>Anyone looking to understand or work with postfix and prefix notations.</li>
+                </ul>
+              
+                <h3>Understanding the Evaluation Process</h3>
+                <p>The evaluator uses a stack-based algorithm:</p>
+                <ul>
+                  <li>For postfix: It scans from left to right, pushing operands onto a stack and applying operators to the top stack elements.</li>
+                  <li>For prefix: It scans from right to left, following a similar process but with reversed order of operations.</li>
+                </ul>
+              
+                <p>By using this tool and studying the evaluation process, you can gain a deeper understanding of how these notations work and how stack-based algorithms can efficiently evaluate complex expressions. This knowledge is fundamental in various areas of computer science, particularly in compiler design and expression parsing.</p>
+              </div>
         </div>
 
         <!-- Optional JavaScript -->
@@ -212,14 +258,6 @@
             })
 
 
-        </script>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-KSX9W2JJ5N"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
-            gtag('config', 'G-KSX9W2JJ5N');
-            gtag('page', "evaluator");
         </script>
     </body>
 

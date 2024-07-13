@@ -3,8 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <meta name="google-adsense-account" content="ca-pub-2217728188815563">
-    <title>Untitled HTML</title>
+    <title>Beautiful Clock</title>
     <style>
       body {
         font-family: arial;
@@ -31,8 +30,8 @@
     </style>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2217728188815563"
-    crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+    integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
   </head>
 
   <body>
@@ -54,13 +53,14 @@
               postfix/Prefix</a>
             <a class="dropdown-item" href="prefixAndPostfixEvaluator.html">Postfix/Prefix-&gt
               Evaluate</a>
-            <a class="dropdown-item" href="Clock.html">Beautiful Clock</a>
             <a class="dropdown-item" href="RandomFPS.html">FPS Simulator</a>
           </div>
           <a class="nav-item nav-link" href="#" onclick='alert("Thanks for using this tool.")'>About</a>
         </div>
       </div>
     </nav>
+    <div class="container">
+      <div class="jumbotron bg-light">
     <h3>Customize Your Clock Below and Please give a Thumbs Up</h3>
     <canvas id="canvas" width="400" height="400" style="border:1px solid grey" download>
     </canvas><br>
@@ -87,12 +87,74 @@
       
       </pre>
     </form>
-
-
+    </div>
+      <div class="jumbotron bg-light">
+        <h2>About the Beautiful Clock</h2>
+        <p class="lead">The Beautiful Clock tool is designed to provide a visually appealing and customizable clock interface. Below is a detailed explanation of the features and functionalities available in this tool.</p>
+        <hr class="my-4">
+        
+        <h3>Features of the Beautiful Clock</h3>
+        <p>
+          The Beautiful Clock includes a range of features that make it a versatile tool for displaying time. It supports customization options that allow you to personalize the appearance of the clock to your liking. The interface is user-friendly, ensuring that even those with minimal technical skills can use it effectively.
+        </p>
+        
+        <h4>Customization Options</h4>
+        <p>
+          - **Border Color**: You can adjust the color of the clock's border using the RGB sliders provided.
+          <br>
+          - **Frame Color**: Similarly, the frame color can be customized to match your preferences.
+          <br>
+          - **Personal Message**: You can add a personal message that will be displayed on the clock.
+          <br>
+          - **Download Option**: Once you are satisfied with the appearance, you can download the clock as an image file.
+        </p>
+        
+        <h4>How to Customize Your Clock</h4>
+        <p>
+          To customize your clock, follow these steps:
+          <br>
+          1. Select the part of the clock you want to customize (Border or Frame) from the dropdown menu.
+          <br>
+          2. Use the RGB sliders to adjust the color to your preference.
+          <br>
+          3. Enter a personal message in the text input field if desired.
+          <br>
+          4. Click the "Download Clock" button to save your customized clock as an image file.
+        </p>
+        
+        <h4>Step-by-Step Example</h4>
+        <p>
+          Let's go through an example to demonstrate how the customization works:
+          <br>
+          1. Select "Border" from the dropdown menu.
+          <br>
+          2. Adjust the RGB sliders to change the border color to your liking.
+          <br>
+          3. Enter a message like "Hello, World!" in the text input field.
+          <br>
+          4. Select "Frame" from the dropdown menu and adjust the RGB sliders to change the frame color.
+          <br>
+          5. Click the "Download Clock" button to save your customized clock as a PNG file.
+        </p>
+        
+        <h4>Handling Errors</h4>
+        <p>
+          If you make a mistake while customizing your clock, you can use the "Reset" button to clear the input and start over. This ensures that you can quickly correct errors without needing to refresh the page or perform other actions.
+        </p>
+        
+        <h4>Real-Time Display</h4>
+        <p>
+          The Beautiful Clock tool provides a real-time display of the current time. It updates every second, ensuring that you always have the most accurate time displayed. This feature is particularly useful for keeping track of time while working on other tasks.
+        </p>
+        
+        <h4>Downloading Your Clock</h4>
+        <p>
+          Once you have customized your clock, you can download it as an image file. Simply click the "Download Clock" button, and the tool will generate a PNG file of your customized clock, which you can save to your device.
+        </p>
+      </div>
+    </div>
+    
     <script>
-      alert("Thank You for trying Clock");
-      alert("customize your clock from below the page Controls");
-      alert("and please give a thumbs Up and like");
       function set_time() {
         var select = [document.getElementById("border"), document.getElementById("frame"), document.getElementById("name").value]
         var color1 = document.getElementById("color1").value;
@@ -189,14 +251,17 @@
         downloadCanvas(this, 'canvas', 'clock.png');
       }, false);
     </script>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KSX9W2JJ5N"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-      gtag('config', 'G-KSX9W2JJ5N');
-      gtag('page', "clock");
-    </script>
+      <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"
+      integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"
+      integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+      crossorigin="anonymous"></script>
   </body>
 
 </html>
