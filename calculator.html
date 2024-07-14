@@ -1,12 +1,12 @@
 <!doctype html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport"
-            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Calculator</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculator</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         /* Custom CSS */
@@ -15,26 +15,32 @@
             line-height: 1.6;
             color: #333;
         }
+
         .navbar {
             background-color: #f8f9fa;
-            box-shadow: 0 2px 4px rgba(0,0,0,.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
         }
+
         .navbar-brand {
             font-weight: bold;
             color: #007bff !important;
         }
+
         .nav-link {
             color: #333 !important;
         }
+
         .nav-link:hover {
             color: #007bff !important;
         }
+
         .jumbotron {
             background-color: #e9ecef;
             padding: 2rem 1rem;
             margin-bottom: 2rem;
             border-radius: .3rem;
         }
+
         .footer {
             background-color: #f8f9fa;
             padding: 1rem 0;
@@ -42,13 +48,15 @@
             border-top: 1px solid #e9ecef;
         }
     </style>
-    </head>
-    <body>
+</head>
+
+<body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <a class="navbar-brand" href="index.html">Simple Tools</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -57,7 +65,8 @@
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Tools
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -67,6 +76,9 @@
                             <a class="dropdown-item" href="Clock.html">Beautiful Clock</a>
                             <a class="dropdown-item" href="RandomFPS.html">FPS Simulator</a>
                         </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://blog.springsfern.in">Blog</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About Us</a>
@@ -82,183 +94,197 @@
         </div>
     </nav>
 
-        <div class="container mt-4">
-            <div class="body m-3 card" style="padding:10px">
-                <div class="text-center">
-                    <p class="lead">Simple Calculator</p>
-                </div>
-                <div class="input my-2">
-                    <input type="text" name="writespace" readonly class="form-control form-control-lg" id="writespace">
-                </div>
-                <div class="past">
-                    <small>Result : </small><small id="past-val">0</small>
-                </div>
-                <div class="input my-2">
-                    <input type="text" value="0" name="printspace" class="form-control form-control-sm" readonly
-                        id="printspace">
-                </div>
-                <div class="buttons">
-                    <table style="width:100%">
-                        <tr>
-                            <td><button class="btn btn-outline-primary w-100">1</button></td>
-                            <td><button class="btn btn-outline-primary w-100">2</button></td>
-                            <td><button class="btn btn-outline-primary w-100">3</button></td>
-                            <td>
-                                <div class="btn-group w-100">
-                                    <button class="btn btn-primary w-100">+</button>
-                                    <button class="btn btn-outline-info w-100">-</button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><button class="btn btn-outline-primary w-100">4</button></td>
-                            <td><button class="btn btn-outline-primary w-100">5</button></td>
-                            <td><button class="btn btn-outline-primary w-100">6</button></td>
-                            <td>
-                                <div class="btn-group w-100">
-                                    <button class="btn btn-primary w-100">x</button>
-                                    <button class="btn btn-outline-info w-100">/</button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><button class="btn btn-outline-primary w-100">7</button></td>
-                            <td><button class="btn btn-outline-primary w-100">8</button></td>
-                            <td><button class="btn btn-outline-primary w-100">9</button></td>
-                            <td>
-                                <div class="btn-group w-100">
-                                    <button class="btn btn-primary w-100">(</button>
-                                    <button class="btn btn-outline-info w-100">)</button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><button class="btn btn-outline-primary w-100">0</button></td>
-                            <td><button class="btn btn-outline-danger w-100">C</button></td>
-                            <td>
-                                <button class="btn btn-outline-success w-100">=</button>
-                            </td>
-                            <td>
-                                <div class="btn-group w-100">
-                                    <button class="btn btn-primary w-100">^</button>
-                                    <button class="btn btn-outline-info w-100">Ans</button>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-
+    <div class="container mt-4">
+        <div class="body m-3 card" style="padding:10px">
+            <div class="text-center">
+                <p class="lead">Simple Calculator</p>
             </div>
-              <h2>About the Simple Calculator</h2>
-              <p class="lead">The Simple Calculator tool is designed to provide a straightforward and efficient way to perform basic arithmetic operations. Below is a detailed explanation of the features and functionalities available in this tool.</p>
-              <hr class="my-4">
-              
-              <h3>Features of the Simple Calculator</h3>
-              <p>
-                The Simple Calculator includes a range of features that make it a versatile tool for everyday use. It supports basic operations such as addition, subtraction, multiplication, and division. The interface is user-friendly, ensuring that even those with minimal technical skills can use it effectively.
-              </p>
-              
-              <h4>Basic Operations</h4>
-              <p>
-                - **Addition (+)**: Use the addition button to sum two or more numbers.
-                <br>
-                - **Subtraction (-)**: Use the subtraction button to subtract one number from another.
-                <br>
-                - **Multiplication (x)**: Use the multiplication button to multiply numbers together.
-                <br>
-                - **Division (/)**: Use the division button to divide one number by another.
-              </p>
-              
-              <h4>Additional Functionalities</h4>
-              <p>
-                The calculator also includes buttons for clearing the input (C), calculating the result (=), and using previously calculated results (Ans). You can also use parentheses for grouping operations and the exponentiation operator (^) for raising numbers to a power.
-              </p>
-              
-              <h3>Using the Calculator</h3>
-              <p>
-                To use the calculator, simply click on the buttons corresponding to the numbers and operations you want to perform. The input area will display your expression, and the result will be shown in the designated result area.
-              </p>
-              
-              <h4>Step-by-Step Example</h4>
-              <p>
-                Let's go through an example to demonstrate how the calculator works:
-                <br>
-                1. Enter the first number by clicking on the appropriate number button.
-                <br>
-                2. Select an operation (e.g., addition by clicking the + button).
-                <br>
-                3. Enter the second number.
-                <br>
-                4. Continue adding more operations and numbers as needed.
-                <br>
-                5. Click the "=" button to evaluate the expression.
-                <br>
-                6. The result will be displayed in the result area.
-              </p>
-              
-              <h4>Handling Errors</h4>
-              <p>
-                If you make a mistake while entering your expression, you can use the "C" button to clear the input and start over. This ensures that you can quickly correct errors without needing to refresh the page or perform other actions.
-              </p>
-              
-              <h4>Evaluating Complex Expressions</h4>
-              <p>
-                The calculator supports the evaluation of complex expressions involving multiple operations and parentheses. For example, you can enter an expression like (3+5)*2^3/4-1 and click the "=" button to see the result. This allows you to perform more advanced calculations without needing a more specialized tool.
-              </p>
-              
-              <h4>Accessing Previous Results</h4>
-              <p>
-                The "Ans" button allows you to use the result of your previous calculation in your current expression. This is particularly useful when performing a series of related calculations and you want to build on previous results without re-entering them manually.
-              </p>
-          </div>
-          
+            <div class="input my-2">
+                <input type="text" name="writespace" readonly class="form-control form-control-lg" id="writespace">
+            </div>
+            <div class="past">
+                <small>Result : </small><small id="past-val">0</small>
+            </div>
+            <div class="input my-2">
+                <input type="text" value="0" name="printspace" class="form-control form-control-sm" readonly
+                    id="printspace">
+            </div>
+            <div class="buttons">
+                <table style="width:100%">
+                    <tr>
+                        <td><button class="btn btn-outline-primary w-100">1</button></td>
+                        <td><button class="btn btn-outline-primary w-100">2</button></td>
+                        <td><button class="btn btn-outline-primary w-100">3</button></td>
+                        <td>
+                            <div class="btn-group w-100">
+                                <button class="btn btn-primary w-100">+</button>
+                                <button class="btn btn-outline-info w-100">-</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn btn-outline-primary w-100">4</button></td>
+                        <td><button class="btn btn-outline-primary w-100">5</button></td>
+                        <td><button class="btn btn-outline-primary w-100">6</button></td>
+                        <td>
+                            <div class="btn-group w-100">
+                                <button class="btn btn-primary w-100">x</button>
+                                <button class="btn btn-outline-info w-100">/</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn btn-outline-primary w-100">7</button></td>
+                        <td><button class="btn btn-outline-primary w-100">8</button></td>
+                        <td><button class="btn btn-outline-primary w-100">9</button></td>
+                        <td>
+                            <div class="btn-group w-100">
+                                <button class="btn btn-primary w-100">(</button>
+                                <button class="btn btn-outline-info w-100">)</button>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><button class="btn btn-outline-primary w-100">0</button></td>
+                        <td><button class="btn btn-outline-danger w-100">C</button></td>
+                        <td>
+                            <button class="btn btn-outline-success w-100">=</button>
+                        </td>
+                        <td>
+                            <div class="btn-group w-100">
+                                <button class="btn btn-primary w-100">^</button>
+                                <button class="btn btn-outline-info w-100">Ans</button>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
 
-        <script src="https://code.jquery.com/jquery-3.2.1.js"
-            integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+        </div>
+        <h2>About the Simple Calculator</h2>
+        <p class="lead">The Simple Calculator tool is designed to provide a straightforward and efficient way to perform
+            basic arithmetic operations. Below is a detailed explanation of the features and functionalities available
+            in this tool.</p>
+        <hr class="my-4">
+
+        <h3>Features of the Simple Calculator</h3>
+        <p>
+            The Simple Calculator includes a range of features that make it a versatile tool for everyday use. It
+            supports basic operations such as addition, subtraction, multiplication, and division. The interface is
+            user-friendly, ensuring that even those with minimal technical skills can use it effectively.
+        </p>
+
+        <h4>Basic Operations</h4>
+        <p>
+            - **Addition (+)**: Use the addition button to sum two or more numbers.
+            <br>
+            - **Subtraction (-)**: Use the subtraction button to subtract one number from another.
+            <br>
+            - **Multiplication (x)**: Use the multiplication button to multiply numbers together.
+            <br>
+            - **Division (/)**: Use the division button to divide one number by another.
+        </p>
+
+        <h4>Additional Functionalities</h4>
+        <p>
+            The calculator also includes buttons for clearing the input (C), calculating the result (=), and using
+            previously calculated results (Ans). You can also use parentheses for grouping operations and the
+            exponentiation operator (^) for raising numbers to a power.
+        </p>
+
+        <h3>Using the Calculator</h3>
+        <p>
+            To use the calculator, simply click on the buttons corresponding to the numbers and operations you want to
+            perform. The input area will display your expression, and the result will be shown in the designated result
+            area.
+        </p>
+
+        <h4>Step-by-Step Example</h4>
+        <p>
+            Let's go through an example to demonstrate how the calculator works:
+            <br>
+            1. Enter the first number by clicking on the appropriate number button.
+            <br>
+            2. Select an operation (e.g., addition by clicking the + button).
+            <br>
+            3. Enter the second number.
+            <br>
+            4. Continue adding more operations and numbers as needed.
+            <br>
+            5. Click the "=" button to evaluate the expression.
+            <br>
+            6. The result will be displayed in the result area.
+        </p>
+
+        <h4>Handling Errors</h4>
+        <p>
+            If you make a mistake while entering your expression, you can use the "C" button to clear the input and
+            start over. This ensures that you can quickly correct errors without needing to refresh the page or perform
+            other actions.
+        </p>
+
+        <h4>Evaluating Complex Expressions</h4>
+        <p>
+            The calculator supports the evaluation of complex expressions involving multiple operations and parentheses.
+            For example, you can enter an expression like (3+5)*2^3/4-1 and click the "=" button to see the result. This
+            allows you to perform more advanced calculations without needing a more specialized tool.
+        </p>
+
+        <h4>Accessing Previous Results</h4>
+        <p>
+            The "Ans" button allows you to use the result of your previous calculation in your current expression. This
+            is particularly useful when performing a series of related calculations and you want to build on previous
+            results without re-entering them manually.
+        </p>
+    </div>
 
 
-        <script>
-            var current_val, collector;
-            $(function (ready) {
-                $("input#writespace").on("change", function () {
-                    $("input#writespace").val(eval($("input#writespace").val()));
-                });
-            })
-
-            $("button").click(function () {
-                current_val = $(this).html();
-
-                if (current_val == "Ans") {
-                    current_val = collector;
-                }
-
-                if (current_val == "C") {
-                    $("input#writespace").val("");
-                }
-                else if (current_val == "^") {
-                    $("input#writespace").val($("input#writespace").val() + "**");
-                }
-                else if (current_val == "x") {
-                    $("input#writespace").val($("input#writespace").val() + "*");
-                }
-                else if (current_val == "=") {
-                    $("input#printspace").val(eval($("input#writespace").val()));
-                }
-                else {
-                    $("input#writespace").val($("input#writespace").val() + current_val);
-                }
-
-                if (current_val in "1234567890)".split("")) {
-                    $("input#printspace").val(eval($("input#writespace").val()));
-                    collector = $("input#printspace").val();
-                    $("#past-val").html($("input#writespace").val());
-                }
+    <script src="https://code.jquery.com/jquery-3.2.1.js"
+        integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
 
 
+    <script>
+        var current_val, collector;
+        $(function (ready) {
+            $("input#writespace").on("change", function () {
+                $("input#writespace").val(eval($("input#writespace").val()));
+            });
+        })
 
-            })
-        </script>
+        $("button").click(function () {
+            current_val = $(this).html();
+
+            if (current_val == "Ans") {
+                current_val = collector;
+            }
+
+            if (current_val == "C") {
+                $("input#writespace").val("");
+            }
+            else if (current_val == "^") {
+                $("input#writespace").val($("input#writespace").val() + "**");
+            }
+            else if (current_val == "x") {
+                $("input#writespace").val($("input#writespace").val() + "*");
+            }
+            else if (current_val == "=") {
+                $("input#printspace").val(eval($("input#writespace").val()));
+            }
+            else {
+                $("input#writespace").val($("input#writespace").val() + current_val);
+            }
+
+            if (current_val in "1234567890)".split("")) {
+                $("input#printspace").val(eval($("input#writespace").val()));
+                collector = $("input#printspace").val();
+                $("#past-val").html($("input#writespace").val());
+            }
+
+
+
+        })
+    </script>
 
     <!-- Footer -->
     <footer class="footer">
@@ -272,4 +298,5 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>

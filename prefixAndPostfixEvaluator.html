@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Postfix and Prefix Notation Evaluator</title>
-        <meta name="keywords" content="Postfix, Prefix, Infix, Notation, Convertor, Evaluator">
-        <meta name="description"
-            content="A utilty for the evaluation of a prefix or a postfix notation with detailed steps." />
-        <script src="ds.js"></script>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Postfix and Prefix Notation Evaluator</title>
+    <meta name="keywords" content="Postfix, Prefix, Infix, Notation, Convertor, Evaluator">
+    <meta name="description"
+        content="A utilty for the evaluation of a prefix or a postfix notation with detailed steps." />
+    <script src="ds.js"></script>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         /* Custom CSS */
@@ -18,26 +18,32 @@
             line-height: 1.6;
             color: #333;
         }
+
         .navbar {
             background-color: #f8f9fa;
-            box-shadow: 0 2px 4px rgba(0,0,0,.1);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
         }
+
         .navbar-brand {
             font-weight: bold;
             color: #007bff !important;
         }
+
         .nav-link {
             color: #333 !important;
         }
+
         .nav-link:hover {
             color: #007bff !important;
         }
+
         .jumbotron {
             background-color: #e9ecef;
             padding: 2rem 1rem;
             margin-bottom: 2rem;
             border-radius: .3rem;
         }
+
         .footer {
             background-color: #f8f9fa;
             padding: 1rem 0;
@@ -45,13 +51,15 @@
             border-top: 1px solid #e9ecef;
         }
     </style>
-    </head>
-    <body>
+</head>
+
+<body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
             <a class="navbar-brand" href="index.html">Simple Tools</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -60,7 +68,8 @@
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Tools
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -72,6 +81,9 @@
                         </div>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="https://blog.springsfern.in">Blog</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="about.html">About Us</a>
                     </li>
                     <li class="nav-item">
@@ -81,228 +93,233 @@
                         <a class="nav-link" href="privacy.html">Privacy Policy</a>
                     </li>
                 </ul>
-                </div>
             </div>
-        </nav>
+        </div>
+    </nav>
 
-        <div class="container mt-4">
-            <div class="jumbotron mt-3 text-center">
-                <h4><span class="badge badge-pill badge-primary"> Updated (12 Feb 2023)</span></h4>
+    <div class="container mt-4">
+        <div class="jumbotron mt-3 text-center">
+            <h4><span class="badge badge-pill badge-primary"> Updated (12 Feb 2023)</span></h4>
 
-                <h1 class="lead" style="font-size:10vmin">Postfix &amp Prefix Evaluator</h1>
-                <p class="lead">This is a simple Prefix or Postfix Evaluator.</p>
+            <h1 class="lead" style="font-size:10vmin">Postfix &amp Prefix Evaluator</h1>
+            <p class="lead">This is a simple Prefix or Postfix Evaluator.</p>
 
-                <hr class="my-4">
-                <p>Enter the Postfix or Prefix expression below in box and press Evaluate
-                    <br><small>Note: Enter the number and operators seperated with space " "</small>
-                </p>
-                <div>
-                    <label for="expression">
-                        <p>Type the Expression below <br><small>prefix : + - 2 7 * 8 / 4 12<br>postfix: 4 55 + 62 23 - *
-                                <br> (seperated with space)</small></p>
-                        <input type="text" class="form-control form-control-lg" name="expression" id="expression">
-                        <br>
-                        <label for="posteval">
-                            <input type="radio" name="fixer" checked id="posteval" value="1"> Postfix Evaluate
-                        </label>
-                        <label for="preeval">
-                            <input type="radio" name="fixer" id="preeval" value="2"> Prefix Evaluate
-                        </label>
-                        <hr>
-                        <a class="btn btn-primary btn-sm" id="convert" role="button"
-                            href="./prefixAndPostfixConvertor.html">&lt Convert</a> <button
-                            class="btn btn-lg btn-warning" id="evaluate">Evaluate</button>
+            <hr class="my-4">
+            <p>Enter the Postfix or Prefix expression below in box and press Evaluate
+                <br><small>Note: Enter the number and operators seperated with space " "</small>
+            </p>
+            <div>
+                <label for="expression">
+                    <p>Type the Expression below <br><small>prefix : + - 2 7 * 8 / 4 12<br>postfix: 4 55 + 62 23 - *
+                            <br> (seperated with space)</small></p>
+                    <input type="text" class="form-control form-control-lg" name="expression" id="expression">
+                    <br>
+                    <label for="posteval">
+                        <input type="radio" name="fixer" checked id="posteval" value="1"> Postfix Evaluate
                     </label>
-                </div>
-
-                <div id="shortresult">
-                    <p class="lead">Evaluated : <span id="eval" class="font-weight-bold"></span>
-                    <div class="text-center">
-                        <small>By Raj</small>
-                    </div>
-                </div>
-
+                    <label for="preeval">
+                        <input type="radio" name="fixer" id="preeval" value="2"> Prefix Evaluate
+                    </label>
+                    <hr>
+                    <a class="btn btn-primary btn-sm" id="convert" role="button"
+                        href="./prefixAndPostfixConvertor.html">&lt Convert</a> <button class="btn btn-lg btn-warning"
+                        id="evaluate">Evaluate</button>
+                </label>
             </div>
 
-            <div id="fullresult">
-                <div class="row">
-                    <div class="col-md-8">
-                        <table class="table table-striped table-bordered">
-                            <thead class="thead-inverse text-left">
-                                <tr>
-                                    <th>Sr. no.</th>
-                                    <th>Expression</th>
-                                    <th>Stack</th>
-                                </tr>
-                            </thead>
+            <div id="shortresult">
+                <p class="lead">Evaluated : <span id="eval" class="font-weight-bold"></span>
+                <div class="text-center">
+                    <small>By Raj</small>
+                </div>
+            </div>
 
-                            <tbody id="tabledata" class="text-left">
+        </div>
+
+        <div id="fullresult">
+            <div class="row">
+                <div class="col-md-8">
+                    <table class="table table-striped table-bordered">
+                        <thead class="thead-inverse text-left">
+                            <tr>
+                                <th>Sr. no.</th>
+                                <th>Expression</th>
+                                <th>Stack</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="tabledata" class="text-left">
 
 
-                            </tbody>
-                            <br>
-                            <span id="ifpre" class="lead"></span>
-                        </table>
-                    </div>
+                        </tbody>
+                        <br>
+                        <span id="ifpre" class="lead"></span>
+                    </table>
+                </div>
 
-                    <div class="col-md-4 text-center">
-                        <h2>
-                            Algorithm used
-                        </h2>
-                        <!--for postfix-->
-                        <div class="text-left">
-                            <p class="lead">Postfix Evaluation</p>
-                            <small>
+                <div class="col-md-4 text-center">
+                    <h2>
+                        Algorithm used
+                    </h2>
+                    <!--for postfix-->
+                    <div class="text-left">
+                        <p class="lead">Postfix Evaluation</p>
+                        <small>
+                            <ul>
+                                <li>Step 1: Add a ")" at the end of the postfix expression</li>
+                                <li>Step 2: Scan every character of the postfix expression and repeat Step 3 and 4
+                                    until
+                                    ")" is encountered.</li>
+                                <li>Step 3: IF an operand is encountered, Push it on the stack<br />
+                                    IF an operator O is encountered, then
+                                    <ul>
+                                        <li>a: Pop the top two elements from the stack as A and B</li>
+                                        <li>b: Evaluate B O A, where A is the topmost element and B is the element
+                                            below
+                                            A.</li>
+                                        <li>c: Push the result of evaluation on the stack<br />[END OF IF]</li>
+                                    </ul>
+                                </li>
+                                <li>Step 4: Set result = stack's top elements</li>
+                                <li>Step 5: Exit</li>
+                            </ul>
+                        </small>
+                        <hr>
+                        <p class="lead">Prefix Evaluation</p>
+                        <small>
+                            <ul>
+                                <li>Step 1: Get Prefix expression as it is</li>
+                                <li>Step 2: Repeat untill all the characters in prefix<br /> expression have been
+                                    scanned</li>
                                 <ul>
-                                    <li>Step 1: Add a ")" at the end of the postfix expression</li>
-                                    <li>Step 2: Scan every character of the postfix expression and repeat Step 3 and 4
-                                        until
-                                        ")" is encountered.</li>
-                                    <li>Step 3: IF an operand is encountered, Push it on the stack<br />
-                                        IF an operator O is encountered, then
+                                    <li>a: Read the prefix expression from right to left one at a time</li>
+                                    <li>b: If the readed character is an operand, push it on the stack</li>
+                                    <li>c: If the readed character is an operator, then
                                         <ul>
-                                            <li>a: Pop the top two elements from the stack as A and B</li>
-                                            <li>b: Evaluate B O A, where A is the topmost element and B is the element
-                                                below
-                                                A.</li>
-                                            <li>c: Push the result of evaluation on the stack<br />[END OF IF]</li>
+                                            <li>i: pop two values from the stack.</li>
+                                            <li>ii: Apply the operation on the operands.</li>
+                                            <li>iii: Push the result onto the stack.</li>
                                         </ul>
                                     </li>
-                                    <li>Step 4: Set result = stack's top elements</li>
-                                    <li>Step 5: Exit</li>
                                 </ul>
-                            </small>
-                            <hr>
-                            <p class="lead">Prefix Evaluation</p>
-                            <small>
-                                <ul>
-                                    <li>Step 1: Get Prefix expression as it is</li>
-                                    <li>Step 2: Repeat untill all the characters in prefix<br /> expression have been
-                                        scanned</li>
-                                    <ul>
-                                        <li>a: Read the prefix expression from right to left one at a time</li>
-                                        <li>b: If the readed character is an operand, push it on the stack</li>
-                                        <li>c: If the readed character is an operator, then
-                                            <ul>
-                                                <li>i: pop two values from the stack.</li>
-                                                <li>ii: Apply the operation on the operands.</li>
-                                                <li>iii: Push the result onto the stack.</li>
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                    </li>
-                                    <li>Step 3: Exit</li>
-                                </ul>
-                            </small>
-                        </div>
+                                </li>
+                                <li>Step 3: Exit</li>
+                            </ul>
+                        </small>
                     </div>
                 </div>
-
             </div>
-            <div class="evaluator-explanation">
-                <h2>Understanding the Postfix & Prefix Evaluator</h2>
-                
-                <p>Our Postfix & Prefix Evaluator is a powerful tool designed to calculate the result of mathematical expressions written in postfix (Reverse Polish Notation) or prefix (Polish Notation) formats. This evaluator is particularly useful for students, programmers, and anyone working with these alternative mathematical notations.</p>
-                
-                <h3>What are Postfix and Prefix Notations?</h3>
-                <ul>
-                  <li><strong>Postfix Notation (Reverse Polish Notation):</strong> In this notation, operators follow their operands. Example: 4 5 + 6 2 - *</li>
-                  <li><strong>Prefix Notation (Polish Notation):</strong> Here, operators precede their operands. Example: + - 2 7 * 8 / 4 12</li>
-                </ul>
-              
-                <h3>How to Use the Evaluator</h3>
-                <ol>
-                  <li>Enter your postfix or prefix expression in the input box.</li>
-                  <li>Ensure that numbers and operators are separated by spaces.</li>
-                  <li>Choose the appropriate evaluation mode (Postfix or Prefix) using the respective buttons.</li>
-                  <li>Click the "Evaluate" button to see the result.</li>
-                  <li>Review the evaluation process in the table below the result.</li>
-                </ol>
-              
-                <h3>Features of Our Evaluator</h3>
-                <ul>
-                  <li><strong>Dual Evaluation:</strong> Supports both postfix and prefix notations.</li>
-                  <li><strong>Step-by-Step Breakdown:</strong> Displays the evaluation process in detail, helping users understand the algorithm.</li>
-                  <li><strong>Support for Complex Expressions:</strong> Handles multiple operators and operands.</li>
-                  <li><strong>Easy Conversion:</strong> Includes a link to convert between infix, postfix, and prefix notations.</li>
-                </ul>
-              
-                <h3>Why Use Postfix and Prefix Notations?</h3>
-                <p>While less intuitive for humans, postfix and prefix notations have several advantages:</p>
-                <ul>
-                  <li>They eliminate the need for parentheses and operator precedence rules.</li>
-                  <li>They are easier for computers to parse and evaluate.</li>
-                  <li>They are used in many programming languages and in some calculators.</li>
-                </ul>
-              
-                <h3>Applications</h3>
-                <p>This evaluator is valuable for:</p>
-                <ul>
-                  <li>Students learning about expression evaluation and stack-based algorithms.</li>
-                  <li>Programmers implementing calculators or expression parsers.</li>
-                  <li>Anyone looking to understand or work with postfix and prefix notations.</li>
-                </ul>
-              
-                <h3>Understanding the Evaluation Process</h3>
-                <p>The evaluator uses a stack-based algorithm:</p>
-                <ul>
-                  <li>For postfix: It scans from left to right, pushing operands onto a stack and applying operators to the top stack elements.</li>
-                  <li>For prefix: It scans from right to left, following a similar process but with reversed order of operations.</li>
-                </ul>
-              
-                <p>By using this tool and studying the evaluation process, you can gain a deeper understanding of how these notations work and how stack-based algorithms can efficiently evaluate complex expressions. This knowledge is fundamental in various areas of computer science, particularly in compiler design and expression parsing.</p>
-              </div>
+
         </div>
+        <div class="evaluator-explanation">
+            <h2>Understanding the Postfix & Prefix Evaluator</h2>
 
-        <!-- Bootstrap JS, Popper.js, and jQuery -->
-        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-            function sel(x) { return document.getElementById(x) }
-            $("#fullresult").hide();
+            <p>Our Postfix & Prefix Evaluator is a powerful tool designed to calculate the result of mathematical
+                expressions written in postfix (Reverse Polish Notation) or prefix (Polish Notation) formats. This
+                evaluator is particularly useful for students, programmers, and anyone working with these alternative
+                mathematical notations.</p>
 
-            //evaluate button and expression
-            $("button#evaluate").click(function () {
-                var items, tab = "";
-                $("#fullresult").show();
-                let table;
+            <h3>What are Postfix and Prefix Notations?</h3>
+            <ul>
+                <li><strong>Postfix Notation (Reverse Polish Notation):</strong> In this notation, operators follow
+                    their operands. Example: 4 5 + 6 2 - *</li>
+                <li><strong>Prefix Notation (Polish Notation):</strong> Here, operators precede their operands. Example:
+                    + - 2 7 * 8 / 4 12</li>
+            </ul>
 
-                const input = document.getElementById("expression").value.trim();
-                switch ($('input[name=fixer]:checked').val()) {
-                    case '1':
-                        if (checker(input) == 0) {
-                            table = postfixEval(input);
-                        }
-                        else {
-                            alert("Humm! looks like this is a prefix expression please select prefix evaluate.");
-                        }
-                        break;
-                    case '2':
-                        if (checker(input) == 1) {
-                            table = prefixEval(input);
-                        }
-                        else {
-                            alert("Humm! looks like this is a postfix expression please select postfix evaluate.");
-                        }
-                        break;
-                }
-                $("span#eval").html(table.s[table.s.length - 1]);
-                for (var i = 0; i < table.char.length; i++) {
-                    tab += "<tr><td>" + i + "</td><td>" + table.char[i] + "</td><td>" + table.s[i] + "</td></tr>";
-                }
+            <h3>How to Use the Evaluator</h3>
+            <ol>
+                <li>Enter your postfix or prefix expression in the input box.</li>
+                <li>Ensure that numbers and operators are separated by spaces.</li>
+                <li>Choose the appropriate evaluation mode (Postfix or Prefix) using the respective buttons.</li>
+                <li>Click the "Evaluate" button to see the result.</li>
+                <li>Review the evaluation process in the table below the result.</li>
+            </ol>
 
-                sel("tabledata").innerHTML = tab;
-            })
+            <h3>Features of Our Evaluator</h3>
+            <ul>
+                <li><strong>Dual Evaluation:</strong> Supports both postfix and prefix notations.</li>
+                <li><strong>Step-by-Step Breakdown:</strong> Displays the evaluation process in detail, helping users
+                    understand the algorithm.</li>
+                <li><strong>Support for Complex Expressions:</strong> Handles multiple operators and operands.</li>
+                <li><strong>Easy Conversion:</strong> Includes a link to convert between infix, postfix, and prefix
+                    notations.</li>
+            </ul>
 
+            <h3>Why Use Postfix and Prefix Notations?</h3>
+            <p>While less intuitive for humans, postfix and prefix notations have several advantages:</p>
+            <ul>
+                <li>They eliminate the need for parentheses and operator precedence rules.</li>
+                <li>They are easier for computers to parse and evaluate.</li>
+                <li>They are used in many programming languages and in some calculators.</li>
+            </ul>
 
-        </script>
+            <h3>Applications</h3>
+            <p>This evaluator is valuable for:</p>
+            <ul>
+                <li>Students learning about expression evaluation and stack-based algorithms.</li>
+                <li>Programmers implementing calculators or expression parsers.</li>
+                <li>Anyone looking to understand or work with postfix and prefix notations.</li>
+            </ul>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container text-center">
-            <a href="privacy.html" class="text-muted">Privacy Policy</a>
+            <h3>Understanding the Evaluation Process</h3>
+            <p>The evaluator uses a stack-based algorithm:</p>
+            <ul>
+                <li>For postfix: It scans from left to right, pushing operands onto a stack and applying operators to
+                    the top stack elements.</li>
+                <li>For prefix: It scans from right to left, following a similar process but with reversed order of
+                    operations.</li>
+            </ul>
+
+            <p>By using this tool and studying the evaluation process, you can gain a deeper understanding of how these
+                notations work and how stack-based algorithms can efficiently evaluate complex expressions. This
+                knowledge is fundamental in various areas of computer science, particularly in compiler design and
+                expression parsing.</p>
         </div>
-    </footer>
-    </body>
+    </div>
+
+    <!-- Bootstrap JS, Popper.js, and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    function sel(x) { return document.getElementById(x) }
+    $("#fullresult").hide();
+
+    //evaluate button and expression
+    $("button#evaluate").click(function () {
+    var items, tab = "";
+    $("#fullresult").show();
+    let table;
+
+    const input = document.getElementById("expression").value.trim();
+    switch ($('input[name=fixer]:checked').val()) {
+    case '1':
+    if (checker(input) == 0) {
+    table = postfixEval(input);
+    }
+    else {
+    alert("Humm! looks like this is a prefix expression please select prefix evaluate.");
+    }
+    break;
+    case '2':
+    if (checker(input) == 1) {
+    table = prefixEval(input);
+    }
+    else {
+    alert("Humm! looks like this is a postfix expression please select postfix evaluate.");
+    }
+    break;
+    }
+    $("span#eval").html(table.s[table.s.length - 1]);
+    for (var i = 0; i < table.char.length; i++) { tab +="<tr><td>" + i + "</td><td>" + table.char[i] + "</td><td>" +
+        table.s[i] + "</td></tr>" ; } sel("tabledata").innerHTML=tab; }) </script>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container text-center">
+                <a href="privacy.html" class="text-muted">Privacy Policy</a>
+            </div>
+        </footer>
+</body>
 
 </html>

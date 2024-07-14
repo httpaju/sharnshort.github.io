@@ -1,93 +1,104 @@
 <!doctype html>
 <html lang="en">
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Beautiful Clock</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        /* Custom CSS */
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-        .navbar {
-            background-color: #f8f9fa;
-            box-shadow: 0 2px 4px rgba(0,0,0,.1);
-        }
-        .navbar-brand {
-            font-weight: bold;
-            color: #007bff !important;
-        }
-        .nav-link {
-            color: #333 !important;
-        }
-        .nav-link:hover {
-            color: #007bff !important;
-        }
-        .jumbotron {
-            background-color: #e9ecef;
-            padding: 2rem 1rem;
-            margin-bottom: 2rem;
-            border-radius: .3rem;
-        }
-        .footer {
-            background-color: #f8f9fa;
-            padding: 1rem 0;
-            margin-top: 2rem;
-            border-top: 1px solid #e9ecef;
-      }
-    </style>
-  </head>
+  <title>Beautiful Clock</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Custom CSS */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
 
-  <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Simple Tools</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Tools
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="calculator.html">Calculator</a>
-                            <a class="dropdown-item" href="prefixAndPostfixConvertor.html">Infix -> Postfix/Prefix</a>
-                            <a class="dropdown-item" href="prefixAndPostfixEvaluator.html">Postfix/Prefix Evaluator</a>
-                            <a class="dropdown-item" href="Clock.html">Beautiful Clock</a>
-                            <a class="dropdown-item" href="RandomFPS.html">FPS Simulator</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="about.html">About Us</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="contact.html">Contact Us</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="privacy.html">Privacy Policy</a>
-                  </li>
-                </ul>
-        </div>
+    .navbar {
+      background-color: #f8f9fa;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: #007bff !important;
+    }
+
+    .nav-link {
+      color: #333 !important;
+    }
+
+    .nav-link:hover {
+      color: #007bff !important;
+    }
+
+    .jumbotron {
+      background-color: #e9ecef;
+      padding: 2rem 1rem;
+      margin-bottom: 2rem;
+      border-radius: .3rem;
+    }
+
+    .footer {
+      background-color: #f8f9fa;
+      padding: 1rem 0;
+      margin-top: 2rem;
+      border-top: 1px solid #e9ecef;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Simple Tools</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Tools
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="calculator.html">Calculator</a>
+              <a class="dropdown-item" href="prefixAndPostfixConvertor.html">Infix -> Postfix/Prefix</a>
+              <a class="dropdown-item" href="prefixAndPostfixEvaluator.html">Postfix/Prefix Evaluator</a>
+              <a class="dropdown-item" href="Clock.html">Beautiful Clock</a>
+              <a class="dropdown-item" href="RandomFPS.html">FPS Simulator</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://blog.springsfern.in">Blog</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="privacy.html">Privacy Policy</a>
+          </li>
+        </ul>
       </div>
-    </nav>
-    <div class="container mt-4">
-      <div class="jumbotron bg-light">
-    <h3>Customize Your Clock Below and Please give a Thumbs Up</h3>
-    <canvas id="canvas" width="400" height="400" style="border:1px solid grey" download>
-    </canvas><br>
-    <form>
-      <pre>
+    </div>
+  </nav>
+  <div class="container mt-4">
+    <div class="jumbotron bg-light">
+      <h3>Customize Your Clock Below and Please give a Thumbs Up</h3>
+      <canvas id="canvas" width="400" height="400" style="border:1px solid grey" download>
+      </canvas><br>
+      <form>
+        <pre>
       <fieldset style="width:300px">
       	Customize Clock's
         
@@ -108,181 +119,190 @@
       </div>
       
       </pre>
-    </form>
+      </form>
     </div>
-      <div class="jumbotron bg-light">
-        <h2>About the Beautiful Clock</h2>
-        <p class="lead">The Beautiful Clock tool is designed to provide a visually appealing and customizable clock interface. Below is a detailed explanation of the features and functionalities available in this tool.</p>
-        <hr class="my-4">
-        
-        <h3>Features of the Beautiful Clock</h3>
-        <p>
-          The Beautiful Clock includes a range of features that make it a versatile tool for displaying time. It supports customization options that allow you to personalize the appearance of the clock to your liking. The interface is user-friendly, ensuring that even those with minimal technical skills can use it effectively.
-        </p>
-        
-        <h4>Customization Options</h4>
-        <p>
-          - **Border Color**: You can adjust the color of the clock's border using the RGB sliders provided.
-          <br>
-          - **Frame Color**: Similarly, the frame color can be customized to match your preferences.
-          <br>
-          - **Personal Message**: You can add a personal message that will be displayed on the clock.
-          <br>
-          - **Download Option**: Once you are satisfied with the appearance, you can download the clock as an image file.
-        </p>
-        
-        <h4>How to Customize Your Clock</h4>
-        <p>
-          To customize your clock, follow these steps:
-          <br>
-          1. Select the part of the clock you want to customize (Border or Frame) from the dropdown menu.
-          <br>
-          2. Use the RGB sliders to adjust the color to your preference.
-          <br>
-          3. Enter a personal message in the text input field if desired.
-          <br>
-          4. Click the "Download Clock" button to save your customized clock as an image file.
-        </p>
-        
-        <h4>Step-by-Step Example</h4>
-        <p>
-          Let's go through an example to demonstrate how the customization works:
-          <br>
-          1. Select "Border" from the dropdown menu.
-          <br>
-          2. Adjust the RGB sliders to change the border color to your liking.
-          <br>
-          3. Enter a message like "Hello, World!" in the text input field.
-          <br>
-          4. Select "Frame" from the dropdown menu and adjust the RGB sliders to change the frame color.
-          <br>
-          5. Click the "Download Clock" button to save your customized clock as a PNG file.
-        </p>
-        
-        <h4>Handling Errors</h4>
-        <p>
-          If you make a mistake while customizing your clock, you can use the "Reset" button to clear the input and start over. This ensures that you can quickly correct errors without needing to refresh the page or perform other actions.
-        </p>
-        
-        <h4>Real-Time Display</h4>
-        <p>
-          The Beautiful Clock tool provides a real-time display of the current time. It updates every second, ensuring that you always have the most accurate time displayed. This feature is particularly useful for keeping track of time while working on other tasks.
-        </p>
-        
-        <h4>Downloading Your Clock</h4>
-        <p>
-          Once you have customized your clock, you can download it as an image file. Simply click the "Download Clock" button, and the tool will generate a PNG file of your customized clock, which you can save to your device.
-        </p>
-      </div>
+    <div class="jumbotron bg-light">
+      <h2>About the Beautiful Clock</h2>
+      <p class="lead">The Beautiful Clock tool is designed to provide a visually appealing and customizable clock
+        interface. Below is a detailed explanation of the features and functionalities available in this tool.</p>
+      <hr class="my-4">
+
+      <h3>Features of the Beautiful Clock</h3>
+      <p>
+        The Beautiful Clock includes a range of features that make it a versatile tool for displaying time. It supports
+        customization options that allow you to personalize the appearance of the clock to your liking. The interface is
+        user-friendly, ensuring that even those with minimal technical skills can use it effectively.
+      </p>
+
+      <h4>Customization Options</h4>
+      <p>
+        - **Border Color**: You can adjust the color of the clock's border using the RGB sliders provided.
+        <br>
+        - **Frame Color**: Similarly, the frame color can be customized to match your preferences.
+        <br>
+        - **Personal Message**: You can add a personal message that will be displayed on the clock.
+        <br>
+        - **Download Option**: Once you are satisfied with the appearance, you can download the clock as an image file.
+      </p>
+
+      <h4>How to Customize Your Clock</h4>
+      <p>
+        To customize your clock, follow these steps:
+        <br>
+        1. Select the part of the clock you want to customize (Border or Frame) from the dropdown menu.
+        <br>
+        2. Use the RGB sliders to adjust the color to your preference.
+        <br>
+        3. Enter a personal message in the text input field if desired.
+        <br>
+        4. Click the "Download Clock" button to save your customized clock as an image file.
+      </p>
+
+      <h4>Step-by-Step Example</h4>
+      <p>
+        Let's go through an example to demonstrate how the customization works:
+        <br>
+        1. Select "Border" from the dropdown menu.
+        <br>
+        2. Adjust the RGB sliders to change the border color to your liking.
+        <br>
+        3. Enter a message like "Hello, World!" in the text input field.
+        <br>
+        4. Select "Frame" from the dropdown menu and adjust the RGB sliders to change the frame color.
+        <br>
+        5. Click the "Download Clock" button to save your customized clock as a PNG file.
+      </p>
+
+      <h4>Handling Errors</h4>
+      <p>
+        If you make a mistake while customizing your clock, you can use the "Reset" button to clear the input and start
+        over. This ensures that you can quickly correct errors without needing to refresh the page or perform other
+        actions.
+      </p>
+
+      <h4>Real-Time Display</h4>
+      <p>
+        The Beautiful Clock tool provides a real-time display of the current time. It updates every second, ensuring
+        that you always have the most accurate time displayed. This feature is particularly useful for keeping track of
+        time while working on other tasks.
+      </p>
+
+      <h4>Downloading Your Clock</h4>
+      <p>
+        Once you have customized your clock, you can download it as an image file. Simply click the "Download Clock"
+        button, and the tool will generate a PNG file of your customized clock, which you can save to your device.
+      </p>
     </div>
-    
-    <script>
-      function set_time() {
-        var select = [document.getElementById("border"), document.getElementById("frame"), document.getElementById("name").value]
-        var color1 = document.getElementById("color1").value;
-        var color2 = document.getElementById("color2").value;
-        var color3 = document.getElementById("color3").value;
-        var color4 = document.getElementById("color4").value;
-        var color5 = document.getElementById("color5").value;
-        var color6 = document.getElementById("color6").value;
-        var choice = document.getElementById("choice").value;
+  </div>
 
-        var color = "rgb(" + color1 + "," + color2 + "," + color3 + ")";
-        var borderColor = "rgb(" + color4 + "," + color5 + "," + color6 + ")";
-        var can = document.getElementById("canvas");
-        var ctx = can.getContext("2d");
-        var radius = can.width / 2;
-        var clockRadius = can.width / 2 - 25;
-        var date = new Date();
-        var hours = date.getHours() % 12;
-        var min = date.getMinutes();
-        var sec = date.getSeconds();
-        var fullhour = hours + min / 60 + sec / 3600;
-        var hourAng = fullhour * Math.PI / 6;
-        var minAng = min * Math.PI / 30;
-        var secAng = sec * Math.PI / 30;
+  <script>
+    function set_time() {
+      var select = [document.getElementById("border"), document.getElementById("frame"), document.getElementById("name").value]
+      var color1 = document.getElementById("color1").value;
+      var color2 = document.getElementById("color2").value;
+      var color3 = document.getElementById("color3").value;
+      var color4 = document.getElementById("color4").value;
+      var color5 = document.getElementById("color5").value;
+      var color6 = document.getElementById("color6").value;
+      var choice = document.getElementById("choice").value;
 
-        if (choice == "border") {
-          select[1].style.display = "none";
-          select[0].style.display = "block";
-        } else if (choice == "frame") {
-          select[0].style.display = "none";
-          select[1].style.display = "block";
-        }
-        ctx.beginPath()
-        ctx.arc(radius, radius, radius - 10, 0, Math.PI * 2);
-        ctx.fillStyle = borderColor;
-        ctx.fill()
-        ctx.beginPath()
-        ctx.arc(radius, radius, clockRadius, 0, Math.PI * 2);
-        ctx.fillStyle = color;
-        ctx.fill()
-        ctx.beginPath()
-        ctx.arc(radius, radius, 10, 0, Math.PI * 2);
-        ctx.fillStyle = "white"
-        ctx.fill()
-        ctx.font = "20px Arial"
-        ctx.textAlign = "center";
-        ctx.baseLine = "middle"
-        ctx.fillStyle = "white"
-        for (i = 1; i <= 12; i++) {
-          ctx.fillText(i, radius + radius * Math.sin(i * (Math.PI / 6)) * 0.79, radius - (radius * Math.cos(i * (Math.PI / 6)) * 0.79))
-        }
-        for (i = 1; i <= 60; i++) {
-          if (i % 5 != 0)
-            ctx.fillText(".", radius + radius * Math.sin(i * (Math.PI / 30)) * 0.78, radius - (radius * Math.cos(i * (Math.PI / 30)) * 0.78))
-        }
-        ctx.strokeStyle = "white";
-        //hour hand
-        ctx.moveTo(radius, radius);
-        ctx.lineTo(radius + radius * Math.sin(hourAng) * 0.5, radius - radius * Math.cos(hourAng) * 0.5);
-        ctx.lineCap = "round"
-        ctx.lineWidth = 5;
-        ctx.stroke();
-        //min hand
-        ctx.moveTo(radius, radius);
-        ctx.lineTo(radius + radius * Math.sin(minAng) * 0.7, radius - radius * Math.cos(minAng) * 0.7);
-        ctx.lineCap = "round"
-        ctx.lineWidth = 3;
-        ctx.stroke();
-        // sec hand
-        ctx.moveTo(radius, radius);
-        ctx.lineTo(radius + radius * Math.sin(secAng) * 0.87, radius - radius * Math.cos(secAng) * 0.87);
-        ctx.lineWidth = 1;
-        ctx.stroke();
+      var color = "rgb(" + color1 + "," + color2 + "," + color3 + ")";
+      var borderColor = "rgb(" + color4 + "," + color5 + "," + color6 + ")";
+      var can = document.getElementById("canvas");
+      var ctx = can.getContext("2d");
+      var radius = can.width / 2;
+      var clockRadius = can.width / 2 - 25;
+      var date = new Date();
+      var hours = date.getHours() % 12;
+      var min = date.getMinutes();
+      var sec = date.getSeconds();
+      var fullhour = hours + min / 60 + sec / 3600;
+      var hourAng = fullhour * Math.PI / 6;
+      var minAng = min * Math.PI / 30;
+      var secAng = sec * Math.PI / 30;
 
-        ctx.fillText(hours + ":" + min + ":" + sec, 200, 100);
-        ctx.fillText(select[2], 200, 130);
+      if (choice == "border") {
+        select[1].style.display = "none";
+        select[0].style.display = "block";
+      } else if (choice == "frame") {
+        select[0].style.display = "none";
+        select[1].style.display = "block";
       }
-      setInterval(set_time, 1000);
-
-      /**
-       * This is the function that will take care of image extracting and
-       * setting proper filename for the download.
-       * IMPORTANT: Call it from within a onclick event.
-      */
-      function downloadCanvas(link, canvasId, filename) {
-        link.href = document.getElementById(canvasId).toDataURL();
-        link.download = filename;
+      ctx.beginPath()
+      ctx.arc(radius, radius, radius - 10, 0, Math.PI * 2);
+      ctx.fillStyle = borderColor;
+      ctx.fill()
+      ctx.beginPath()
+      ctx.arc(radius, radius, clockRadius, 0, Math.PI * 2);
+      ctx.fillStyle = color;
+      ctx.fill()
+      ctx.beginPath()
+      ctx.arc(radius, radius, 10, 0, Math.PI * 2);
+      ctx.fillStyle = "white"
+      ctx.fill()
+      ctx.font = "20px Arial"
+      ctx.textAlign = "center";
+      ctx.baseLine = "middle"
+      ctx.fillStyle = "white"
+      for (i = 1; i <= 12; i++) {
+        ctx.fillText(i, radius + radius * Math.sin(i * (Math.PI / 6)) * 0.79, radius - (radius * Math.cos(i * (Math.PI / 6)) * 0.79))
       }
-      /** 
-       * The event handler for the link's onclick event. We give THIS as a
-       * parameter (=the link element), ID of the canvas and a filename.
-      */
-      document.getElementById('down').addEventListener('click', function () {
-        downloadCanvas(this, 'canvas', 'clock.png');
-      }, false);
-    </script>
+      for (i = 1; i <= 60; i++) {
+        if (i % 5 != 0)
+          ctx.fillText(".", radius + radius * Math.sin(i * (Math.PI / 30)) * 0.78, radius - (radius * Math.cos(i * (Math.PI / 30)) * 0.78))
+      }
+      ctx.strokeStyle = "white";
+      //hour hand
+      ctx.moveTo(radius, radius);
+      ctx.lineTo(radius + radius * Math.sin(hourAng) * 0.5, radius - radius * Math.cos(hourAng) * 0.5);
+      ctx.lineCap = "round"
+      ctx.lineWidth = 5;
+      ctx.stroke();
+      //min hand
+      ctx.moveTo(radius, radius);
+      ctx.lineTo(radius + radius * Math.sin(minAng) * 0.7, radius - radius * Math.cos(minAng) * 0.7);
+      ctx.lineCap = "round"
+      ctx.lineWidth = 3;
+      ctx.stroke();
+      // sec hand
+      ctx.moveTo(radius, radius);
+      ctx.lineTo(radius + radius * Math.sin(secAng) * 0.87, radius - radius * Math.cos(secAng) * 0.87);
+      ctx.lineWidth = 1;
+      ctx.stroke();
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container text-center">
-            <a href="privacy.html" class="text-muted">Privacy Policy</a>
-        </div>
-    </footer>
+      ctx.fillText(hours + ":" + min + ":" + sec, 200, 100);
+      ctx.fillText(select[2], 200, 130);
+    }
+    setInterval(set_time, 1000);
 
-    <!-- Bootstrap JS and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    /**
+     * This is the function that will take care of image extracting and
+     * setting proper filename for the download.
+     * IMPORTANT: Call it from within a onclick event.
+    */
+    function downloadCanvas(link, canvasId, filename) {
+      link.href = document.getElementById(canvasId).toDataURL();
+      link.download = filename;
+    }
+    /** 
+     * The event handler for the link's onclick event. We give THIS as a
+     * parameter (=the link element), ID of the canvas and a filename.
+    */
+    document.getElementById('down').addEventListener('click', function () {
+      downloadCanvas(this, 'canvas', 'clock.png');
+    }, false);
+  </script>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container text-center">
+      <a href="privacy.html" class="text-muted">Privacy Policy</a>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
