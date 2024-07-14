@@ -1,200 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Simple tools : A set of useful computer science tools such as prefix to postfix notation convertor,
-      evaluator, etc.</title>
-    <meta name="keywords" content="Postfix, Prefix, Infix, Notation, Convertor, Evaluator">
-    <meta name="description"
-      content="A set of useful tools such as infix to prefix/postfix conversion, prefix or postfix evaluator with steps, etc." />
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        /* Custom CSS */
-        .banner {
-          max-width: 100%;
-          max-height: 400px; /* Adjust this value as needed */
-          width: auto;
-          height: auto;
-          display: block;
-          margin: 0 auto;
-          object-fit: cover;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-        .navbar {
-            background-color: #f8f9fa;
-            box-shadow: 0 2px 4px rgba(0,0,0,.1);
-        }
-        .navbar-brand {
-            font-weight: bold;
-            color: #007bff !important;
-        }
-        .nav-link {
-            color: #333 !important;
-        }
-        .nav-link:hover {
-            color: #007bff !important;
-        }
-        .jumbotron {
-            background-color: #e9ecef;
-            padding: 2rem 1rem;
-            margin-bottom: 2rem;
-            border-radius: .3rem;
-        }
-        .footer {
-            background-color: #f8f9fa;
-            padding: 1rem 0;
-            margin-top: 2rem;
-            border-top: 1px solid #e9ecef;
-        }
-      </style>
-  </head>
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Simple tools : A set of useful computer science tools such as prefix to postfix notation convertor,
+    evaluator, etc.</title>
+  <meta name="keywords" content="Postfix, Prefix, Infix, Notation, Convertor, Evaluator">
+  <meta name="description"
+    content="A set of useful tools such as infix to prefix/postfix conversion, prefix or postfix evaluator with steps, etc." />
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Custom CSS */
+    .banner {
+      max-width: 100%;
+      max-height: 400px;
+      /* Adjust this value as needed */
+      width: auto;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      object-fit: cover;
+    }
 
-  <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Simple Tools</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Tools
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="calculator.html">Calculator</a>
-                            <a class="dropdown-item" href="prefixAndPostfixConvertor.html">Infix -> Postfix/Prefix</a>
-                            <a class="dropdown-item" href="prefixAndPostfixEvaluator.html">Postfix/Prefix Evaluator</a>
-                            <a class="dropdown-item" href="Clock.html">Beautiful Clock</a>
-                            <a class="dropdown-item" href="RandomFPS.html">FPS Simulator</a>
-                        </div>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="about.html">About Us</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="contact.html">Contact Us</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="contact.html">Privacy Policy</a>
-                  </li>
-                </ul>
-        </div>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    .navbar {
+      background-color: #f8f9fa;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+      color: #007bff !important;
+    }
+
+    .nav-link {
+      color: #333 !important;
+    }
+
+    .nav-link:hover {
+      color: #007bff !important;
+    }
+
+    .jumbotron {
+      background-color: #e9ecef;
+      padding: 2rem 1rem;
+      margin-bottom: 2rem;
+      border-radius: .3rem;
+    }
+
+    .footer {
+      background-color: #f8f9fa;
+      padding: 1rem 0;
+      margin-top: 2rem;
+      border-top: 1px solid #e9ecef;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Simple Tools</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Tools
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="calculator.html">Calculator</a>
+              <a class="dropdown-item" href="prefixAndPostfixConvertor.html">Infix -> Postfix/Prefix</a>
+              <a class="dropdown-item" href="prefixAndPostfixEvaluator.html">Postfix/Prefix Evaluator</a>
+              <a class="dropdown-item" href="Clock.html">Beautiful Clock</a>
+              <a class="dropdown-item" href="RandomFPS.html">FPS Simulator</a>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="privacy.html">Privacy Policy</a>
+          </li>
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <div class="container mt-4">
-      <div class="jumbotron bg-light">
-        <h1 class="display-3">Simple Tools</h1>
-        <img class="banner" src="banner.png" alt="Simple Tools Banner" width="100%" height="auto">
-        <hr class="my-4">
-        <span class="lead">
-          <p>This page contains simple tools like Clock, Calculator, Converters, etc.</p>
-          <ul class="list-group">
-            <li class="list-group-item">
-              <h3>Simple Calculator</h3> <a href="calculator.html">Calculator</a>
-            </li>
-            <li class="list-group-item">
-              <h3>Simple Clock</h3> <a href="Clock.html">Clock</a>
-            </li>
-            <li class="list-group-item">
-              <h3>Simple Infix to Postfix or Prefix convertor <span class="badge badge-pill badge-success"> Updated (12
-                  Feb 2023)</span>
+  <div class="container mt-4">
+    <div class="jumbotron bg-light">
+      <h1 class="display-3">Simple Tools</h1>
+      <img class="banner" src="banner.png" alt="Simple Tools Banner" width="100%" height="auto">
+      <hr class="my-4">
+      <span class="lead">
+        <p>This page contains simple tools like Clock, Calculator, Converters, etc.</p>
+        <ul class="list-group">
+          <li class="list-group-item">
+            <h3>Simple Calculator</h3> <a href="calculator.html">Calculator</a>
+          </li>
+          <li class="list-group-item">
+            <h3>Simple Clock</h3> <a href="Clock.html">Clock</a>
+          </li>
+          <li class="list-group-item">
+            <h3>Simple Infix to Postfix or Prefix convertor <span class="badge badge-pill badge-success"> Updated (12
+                Feb 2023)</span>
 
-              </h3> <a href="prefixAndPostfixConvertor.html">Infix to Postfix or Prefix convertor</a>
-            </li>
-            <li class="list-group-item">
-              <h3>Simple Postfix and Prefix Evaluator <span class="badge badge-pill badge-primary"> Updated (12 Feb
-                  2023)</span></h3> <a href="prefixAndPostfixEvaluator.html">Simple Postfix and Prefix Evaluator</a>
-            </li>
-            <li class="list-group-item">
-              <h3>Simple FPS simulator</h3> <a href="RandomFPS.html">Simple FPS simulator</a>
-            </li>
-            <!-- <li class="list-group-item">
+            </h3> <a href="prefixAndPostfixConvertor.html">Infix to Postfix or Prefix convertor</a>
+          </li>
+          <li class="list-group-item">
+            <h3>Simple Postfix and Prefix Evaluator <span class="badge badge-pill badge-primary"> Updated (12 Feb
+                2023)</span></h3> <a href="prefixAndPostfixEvaluator.html">Simple Postfix and Prefix Evaluator</a>
+          </li>
+          <li class="list-group-item">
+            <h3>Simple FPS simulator</h3> <a href="RandomFPS.html">Simple FPS simulator</a>
+          </li>
+          <!-- <li class="list-group-item">
               <h3>Simple Binary Search Tree Solver</h3> <a href="#" onclick="alert('Under Development...')">Simple BST
                 Solver</a>
             </li> -->
 
-          </ul>
-          <div class="container">
-            <div class="jumbotron bg-light">
-              <h2>Tool Descriptions</h2>
-              <p class="lead">Below is a brief description of each tool available on this website.</p>
-              <hr class="my-4">
-              
-              <div class="tool-description">
-                <h3>Simple Calculator</h3>
-                <p>
-                  Our Simple Calculator allows you to perform basic arithmetic operations such as addition, subtraction, multiplication, and division. It is designed for ease of use and quick calculations. 
-                  <a href="calculator.html">Try the Calculator</a>
-                </p>
-              </div>
-              
-              <div class="tool-description">
-                <h3>Simple Clock</h3>
-                <p>
-                  The Simple Clock tool provides a beautiful, real-time display of the current time. It's perfect for keeping track of time while working on other tasks.
-                  <a href="Clock.html">View the Clock</a>
-                </p>
-              </div>
-              
-              <div class="tool-description">
-                <h3>Infix to Postfix/Prefix Converter</h3>
-                <p>
-                  This tool helps you convert expressions from infix notation to postfix or prefix notation. This can be particularly useful in computer science for expression evaluation and compiler design.
-                  <a href="prefixAndPostfixConvertor.html">Convert Expressions</a>
-                </p>
-              </div>
-              
-              <div class="tool-description">
-                <h3>Postfix and Prefix Evaluator</h3>
-                <p>
-                  Use the Postfix and Prefix Evaluator to evaluate expressions written in postfix or prefix notation. This tool simplifies complex calculations by breaking them down into manageable steps.
-                  <a href="prefixAndPostfixEvaluator.html">Evaluate Expressions</a>
-                </p>
-              </div>
-              
-              <div class="tool-description">
-                <h3>Simple FPS Simulator</h3>
-                <p>
-                  The Simple FPS Simulator is a fun tool that allows you to simulate frames per second in a gaming environment. It's useful for testing the performance of graphical applications.
-                  <a href="RandomFPS.html">Run the FPS Simulator</a>
-                </p>
-              </div>
-              
-              <div class="alert alert-info">
-                <p class="lead"><b>Note:</b> Please ensure that there are no spaces in expressions. For example, write A+B/C or 4+5/3 instead of A + B / C or 4 + 5 / 3.</p>
-              </div>
-              
-              <p>For any suggestions or if you need a specific tool, feel free to <a href="mailto:rs457036@gmail.com?subject=I%20want%20a%20tool%20for">contact me</a>.</p>
-            </div>
+        </ul>
+        <hr class="my-4">
+        <div class="container">
+          <div class="jumbotron bg-light">
+            <h2>Tool Descriptions</h2>
+            <p class="lead">Below is a brief description of each tool available on this website.</p>
+            <ul class="list-group">
+              <li class="list-group-item">
+                <div class="tool-description">
+                  <h3><a href="calculator.html">Simple Calculator</a></h3>
+                  <p>
+                    Our Simple Calculator allows you to perform basic arithmetic operations such as addition,
+                    subtraction, multiplication, and division. It is designed for ease of use and quick calculations.
+                  </p>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="tool-description">
+                  <h3><a href="Clock.html">Simple Clock</a></h3>
+                  <p>
+                    The Simple Clock tool provides a beautiful, real-time display of the current time. It's perfect for
+                    keeping track of time while working on other tasks.
+                  </p>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="tool-description">
+                  <h3><a href="prefixAndPostfixConvertor.html">Infix to Postfix/Prefix Converter</a></h3>
+                  <p>
+                    This tool helps you convert expressions from infix notation to postfix or prefix notation. This can
+                    be particularly useful in computer science for expression evaluation and compiler design.
+                  </p>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="tool-description">
+                  <h3><a href="prefixAndPostfixEvaluator.html">Postfix and Prefix Evaluator</a></h3>
+                  <p>
+                    Use the Postfix and Prefix Evaluator to evaluate expressions written in postfix or prefix notation.
+                    This tool simplifies complex calculations by breaking them down into manageable steps.
+                  </p>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="tool-description">
+                  <h3><a href="RandomFPS.html">Simple FPS Simulator</a></h3>
+                  <p>
+                    The Simple FPS Simulator is a fun tool that allows you to simulate frames per second in a gaming
+                    environment. It's useful for testing the performance of graphical applications.
+                  </p>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <div class="alert alert-info">
+                  <p class="lead"><b>Note:</b> Please ensure that there are no spaces in expressions. For example, write
+                    A+B/C or 4+5/3 instead of A + B / C or 4 + 5 / 3.</p>
+                </div>
+              </li>
+            </ul>
           </div>
-        </span>
-      </div>
-    </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container text-center">
-            <a href="privacy.html" class="text-muted">Privacy Policy</a>
         </div>
-    </footer>
+      </span>
+    </div>
+  </div>
 
-    <!-- Bootstrap JS, Popper.js, and jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container text-center">
+      <a href="privacy.html" class="text-muted">Privacy Policy</a>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
